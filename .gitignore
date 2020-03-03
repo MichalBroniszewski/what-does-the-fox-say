@@ -1,0 +1,7 @@
+log/
+flyway_configuration.yml
+flyway_configuration_rc.yml
+flyway_configuration_prod.yml
+.idea
+vendor/
+ssh.yml

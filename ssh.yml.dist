@@ -1,0 +1,6 @@
+dev:
+    cockpit: aa@cockpit
+    picodi: test@123
+prod:
+    cockpit: prod@cockpit
+    picodi: prod@123

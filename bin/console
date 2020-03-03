@@ -1,0 +1,19 @@
+#!/usr/bin/env php
+<?php
+declare(strict_types=1);
+/**
+ * user: michal
+ * michal.broniszewski@picodi.com
+ * 12.02.2020
+ */
+
+require_once __DIR__ . '/../vendor/autoload.php';
+
+use Symfony\Component\Console\Application;
+use CptDeceiver\Command\SSH\ConnectToServerCommand;
+
+$app = new Application('connect-ssh');
+
+$app->add(new ConnectToServerCommand());
+
+$app->run();

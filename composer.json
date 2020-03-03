@@ -1,0 +1,25 @@
+{
+    "name": "cpt-deceiver/what-does-the-fox-say",
+    "description": "PHP Command",
+    "license": [
+        "MIT"
+    ],
+    "authors": [
+        {
+            "name": "Michal Broniszewski",
+            "email": "mi.broniszewski@gmail.com"
+        }
+    ],
+    "require": {
+        "symfony/console": "^5.0",
+        "symfony/yaml": "^5.0"
+    },
+    "require-dev": {
+        "roave/security-advisories": "dev-master"
+    },
+    "autoload": {
+        "psr-4": {
+            "CptDeceiver\\": "src/"
+        }
+    }
+}
