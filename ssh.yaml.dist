@@ -1,0 +1,14 @@
+environment:
+    - prod
+
+project:
+    - main
+
+server:
+    - server
+
+command_templates:
+    picodi: command_template_%s.%s
+
+region:
+    - region

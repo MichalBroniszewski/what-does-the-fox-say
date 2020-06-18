@@ -20,7 +20,14 @@ class SSHDataProvider
     /**
      * @var string
      */
-    private const SSH_FILE_PATH = 'ssh.yml';
+    private const SSH_FILE_PATH = __DIR__ . '/../../ssh.yaml';
+
+    private $data;
+
+    public function __construct()
+    {
+        $this->data = $this->getSSHData();
+    }
 
     /**
      * @return array
@@ -32,8 +39,32 @@ class SSHDataProvider
 
     public function getEnvironments(): array
     {
-        $sshData = $this->getSSHData();
+        return $this->data['environment'];
+    }
 
-        return array_keys($sshData);
+    public function getProjects(): array
+    {
+        return $this->data['project'];
+    }
+
+    public function getServers(): array
+    {
+        return $this->data['server'];
+    }
+
+    public function getRegions(): array
+    {
+        return $this->data['region'];
+    }
+
+    public function getTemplates(): array
+    {
+        return $this->data['command_templates'];
+    }
+
+    public function getTemplate(string $project): string
+    {
+        $templates = $this->getTemplates();
+        return $templates[$project];
     }
 }

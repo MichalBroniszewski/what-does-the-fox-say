@@ -10,10 +10,10 @@ declare(strict_types=1);
 require_once __DIR__ . '/../vendor/autoload.php';
 
 use Symfony\Component\Console\Application;
-use CptDeceiver\Command\SSH\ConnectToServerCommand;
+use CptDeceiver\Command\SSH\ConnectCommand;
 
 $app = new Application('connect-ssh');
 
-$app->add(new ConnectToServerCommand());
+$app->add(new ConnectCommand());
 
 $app->run();
